@@ -1,0 +1,19 @@
+Average monthly headcount (window): 11,420.2
+End-of-window active headcount: 12,003
+Total roster in window (active+departed): 13,403
+Total departures logged: 1,400
+  Voluntary: 1,133
+  Involuntary: 267
+  Regrettable (HR flag): 153
+Observation window: 2024-01-01 to 2025-12-31 (2.00 years)
+
+Year-by-year voluntary attrition rate (dataset-derived):
+  2024: 552 voluntary exits / 10,897 avg headcount = 5.07%
+  2025: 581 voluntary exits / 11,944 avg headcount = 4.86%
+
+Note: Annual Report FY2025 states voluntary attrition of 10.4% (FY2024: 10.9%).
+The dataset-derived rate above may differ from the Annual Report headline figure.
+Per the Case Brief, the CSV datasets (not the Annual Report) are the analytical
+ground truth for this challenge; the Annual Report is used only for qualitative
+narrative context (e.g. Entity_B risk, Risk & Compliance/FAR pressure). This
+discrepancy is documented as an explicit limitation in the final deck.

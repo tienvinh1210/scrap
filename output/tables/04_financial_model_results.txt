@@ -1,0 +1,73 @@
+==========================================================================================
+COMPONENT 1: REGRETTABLE ATTRITION (Finance estimate: $22-25M/yr)
+==========================================================================================
+HR-flagged regrettable departures: 153 over 2 years
+  Total loaded salary at exit: $22,366,624
+  Replacement cost (x1.5, backfill 85%), 2yr total: $28,517,446
+  ANNUALISED regrettable attrition cost: $14,258,723
+  vs Finance estimate range: $22-25M
+
+--- Sub-cohort A: Entity_B voluntary high-value departures (leadership-trust driven) ---
+  Headcount: 48  |  Avg salary: $163,848
+  2yr replacement cost: $11,230,792  |  Annualised: $5,615,396
+  Of which HR-flagged 'regrettable': 18
+
+--- Sub-cohort B: Risk & Compliance Director+(L4+) NovaCorp-Origin departures (talent poaching) ---
+  Headcount: 12  |  Avg salary: $302,492
+  2yr replacement cost: $5,183,497  |  Annualised: $2,591,749
+
+--- All high-value (L3+/HiPo) voluntary departures, company-wide, for reference ---
+  Headcount: 255  |  2yr cost: $61,270,339  |  Annualised: $30,635,170
+
+--- All voluntary departures, company-wide (upper bound reference) ---
+  Headcount: 1133  |  2yr cost: $202,150,108  |  Annualised: $101,075,054
+
+==========================================================================================
+COMPONENT 2: DISENGAGEMENT-DRIVEN PRODUCTIVITY LOSS (Finance estimate: $12-15M/yr)
+==========================================================================================
+Persistently disengaged ACTIVE headcount: 2699 (22.5% of active workforce)
+  Avg loaded salary: $146,457
+  ANNUAL productivity loss (15% of loaded salary): $59,293,114
+  vs Finance estimate range: $12-15M
+
+Breakdown by department (headcount, cost):
+                      headcount  annual_cost
+department                                  
+Retail Banking            757.0   16154645.0
+Risk & Compliance         558.0   12184586.0
+Insurance                 494.0   11207935.0
+Corporate Operations      489.0   10758468.0
+Technology                229.0    5072239.0
+Wealth Management         144.0    3105497.0
+Executive Leadership       28.0     809743.0
+
+CAVEAT: goal_achievement_score does not differ significantly between disengaged and
+engaged active employees (t-test p=0.16, see 03_deep_dive). This cost is a SIZE-OF-
+POPULATION estimate applying Finance's flat 15% assumption, not an empirically measured
+productivity deficit. Documented as a limitation in the deck.
+
+==========================================================================================
+COMPONENT 3: HIRING INEFFICIENCY (Finance estimate: $4-6M/yr)
+==========================================================================================
+In-window (2024-2025) new hires by channel: agency=274, direct=93, referral=88
+Agency fee cost (18% of first-yr salary), 2yr total: $6,072,174
+Direct-hire benchmark cost for same volume, 2yr total: $1,507,000
+EXCESS cost of routing these hires through agency vs direct/referral pipeline, 2yr: $4,565,174
+  Annualised: $2,282,587
+
+Agency-sourced early exits (<=12mo tenure) in window: 23 of 274 agency hires (8.4%)
+  Poor-match replacement cost, 2yr: $4,540,040  |  Annualised: $2,270,020
+
+TOTAL hiring inefficiency (excess channel cost + poor-match backfill), annualised: $4,552,607
+  vs Finance estimate range: $4-6M
+
+==========================================================================================
+SUMMARY: RECOMPUTED $42M BREAKDOWN vs FINANCE ESTIMATE
+==========================================================================================
+Component                                    Finance Est.      Data-derived (annual) 
+Regrettable attrition (HR-flagged)           $22-25M           $14.3M
+  of which Entity_B high-value                                 $5.62M
+  of which R&C Director+ (NovaCorp)                            $2.59M
+Disengagement productivity loss              $12-15M           $59.3M
+Hiring inefficiency                          $4-6M             $4.6M
+TOTAL                                        ~$42M             $78.1M

@@ -1,0 +1,460 @@
+================================================================================
+EMPLOYEES.csv shape: (13403, 24)
+employee_id                    object
+name                           object
+hire_date              datetime64[ns]
+exit_date              datetime64[ns]
+status                         object
+department                     object
+role_family                    object
+role_level                      int64
+job_title                      object
+salary                        float64
+compa_ratio                   float64
+gender                         object
+age_band                       object
+cultural_background            object
+contract_type                  object
+hipo_flag                        bool
+promotion_eligible               bool
+manager_id                     object
+hire_source                    object
+legacy_entity_code             object
+data_source_system             object
+days_to_fill                  float64
+tenure_months                   int64
+acting_appointment               bool
+dtype: object
+
+Nulls per column:
+ employee_id                0
+name                       0
+hire_date                  0
+exit_date              12003
+status                     0
+department                 0
+role_family                0
+role_level                 0
+job_title                  0
+salary                     0
+compa_ratio                0
+gender                     0
+age_band                   0
+cultural_background        0
+contract_type              0
+hipo_flag                  0
+promotion_eligible         0
+manager_id                 1
+hire_source                0
+legacy_entity_code         0
+data_source_system         0
+days_to_fill               0
+tenure_months              0
+acting_appointment         0
+dtype: int64
+
+status counts:
+ status
+active      12003
+departed     1400
+Name: count, dtype: int64
+
+department counts:
+ department
+Retail Banking          3280
+Technology              3032
+Risk & Compliance       2022
+Insurance               1781
+Wealth Management       1549
+Corporate Operations    1509
+Executive Leadership     230
+Name: count, dtype: int64
+
+role_family counts:
+ role_family
+Operations-Processing    3140
+Client-Advisory          2309
+Technology               2236
+Corporate-Support        2003
+Risk-Compliance          1888
+Management               1802
+Executive                  25
+Name: count, dtype: int64
+
+role_level counts:
+ role_level
+1    7759
+2    3997
+3    1265
+4     279
+5      78
+6      16
+7       8
+8       1
+Name: count, dtype: int64
+
+contract_type counts:
+ contract_type
+Full-time     10435
+Part-time      1599
+Fixed-term      689
+Casual          680
+Name: count, dtype: int64
+
+hire_source counts:
+ hire_source
+acquisition    5344
+agency         3243
+direct         2787
+referral       1346
+graduate        683
+Name: count, dtype: int64
+
+legacy_entity_code counts:
+ legacy_entity_code
+NovaCorp-Origin    8555
+Entity_A           1950
+Entity_B           1884
+Entity_C           1014
+Name: count, dtype: int64
+
+data_source_system counts:
+ data_source_system
+WorkdayHR            8555
+SAP-HR               1950
+BambooHR-EntityB     1884
+PeopleSoft-Legacy    1014
+Name: count, dtype: int64
+
+gender counts:
+ gender
+Female               6385
+Male                 6172
+Non-binary            489
+Prefer not to say     357
+Name: count, dtype: int64
+
+age_band counts:
+ age_band
+35-39    2101
+30-34    1959
+60+      1626
+25-29    1620
+40-44    1407
+18-24    1395
+50-54    1145
+45-49    1135
+55-59    1015
+Name: count, dtype: int64
+
+hipo_flag counts:
+ hipo_flag
+False    12193
+True      1210
+Name: count, dtype: int64
+
+acting_appointment counts:
+ acting_appointment
+False    13321
+True        82
+Name: count, dtype: int64
+
+promotion_eligible counts:
+ promotion_eligible
+False    9978
+True     3425
+Name: count, dtype: int64
+
+hire_date range: 1988-01-11 00:00:00 2025-12-17 00:00:00
+exit_date range: 2024-01-31 00:00:00 2025-12-31 00:00:00
+
+salary describe:
+ count    1.340300e+04
+mean     1.280615e+05
+std      6.008996e+04
+min      5.500000e+04
+25%      9.420000e+04
+50%      1.227000e+05
+75%      1.399000e+05
+max      1.206500e+06
+Name: salary, dtype: float64
+
+compa_ratio describe:
+ count    13403.000000
+mean         0.945397
+std          0.071107
+min          0.660000
+25%          0.900000
+50%          0.950000
+75%          0.990000
+max          1.190000
+Name: compa_ratio, dtype: float64
+
+tenure_months describe:
+ count    13403.000000
+mean       153.842871
+std        147.727725
+min          0.000000
+25%         20.000000
+50%         97.000000
+75%        282.000000
+max        462.000000
+Name: tenure_months, dtype: float64
+
+days_to_fill describe:
+ count    13403.000000
+mean        51.908155
+std         22.273486
+min         14.000000
+25%         32.000000
+50%         52.000000
+75%         71.000000
+max         90.000000
+Name: days_to_fill, dtype: float64
+
+days_to_fill nulls by hire_source:
+ hire_source
+acquisition    0.0
+agency         0.0
+direct         0.0
+graduate       0.0
+referral       0.0
+Name: days_to_fill, dtype: float64
+
+active with exit_date set: 0
+departed with exit_date null: 0
+
+duplicated employee_id: 0
+================================================================================
+ATTRITION_LOG.csv shape: (1400, 10)
+employee_id                         object
+exit_date                   datetime64[ns]
+exit_type                           object
+stated_exit_reason                  object
+notice_period_served                  bool
+regrettable_flag                      bool
+performance_band_at_exit            object
+salary_at_exit                     float64
+manager_id_at_exit                  object
+pathway                             object
+dtype: object
+
+Nulls:
+ employee_id                 0
+exit_date                   0
+exit_type                   0
+stated_exit_reason          0
+notice_period_served        0
+regrettable_flag            0
+performance_band_at_exit    0
+salary_at_exit              0
+manager_id_at_exit          0
+pathway                     0
+dtype: int64
+
+exit_type counts:
+ exit_type
+voluntary      1133
+involuntary     267
+Name: count, dtype: int64
+
+regrettable_flag counts:
+ regrettable_flag
+False    1247
+True      153
+Name: count, dtype: int64
+
+pathway counts:
+ pathway
+push    955
+pull    445
+Name: count, dtype: int64
+
+crosstab exit_type x pathway:
+ pathway      pull  push
+exit_type              
+involuntary     0   267
+voluntary     445   688
+
+crosstab exit_type x regrettable_flag:
+ regrettable_flag  False  True 
+exit_type                     
+involuntary         267      0
+voluntary           980    153
+
+stated_exit_reason counts:
+ stated_exit_reason
+Career advancement                   649
+Better opportunity                   271
+Involuntary - performance            196
+Compensation                          50
+Involuntary - restructure             50
+Work-life balance                     45
+Personal reasons                      36
+Relocation                            33
+Role uncertainty / unclear future     30
+Involuntary - conduct                 21
+Study/career change                   19
+Name: count, dtype: int64
+
+performance_band_at_exit counts:
+ performance_band_at_exit
+Meets Expectations    507
+High Performer        372
+Below Expectations    259
+Outstanding           151
+Unsatisfactory        111
+Name: count, dtype: int64
+
+notice_period_served counts:
+ notice_period_served
+True     1102
+False     298
+Name: count, dtype: int64
+
+duplicated employee_id in attrition_log: 0
+
+departed in employees.csv: 1400
+rows in attrition_log: 1400
+departed but missing from attrition_log: 0
+in attrition_log but not marked departed in employees.csv: 0
+================================================================================
+ENGAGEMENT.csv shape: (55971, 12)
+employee_id                          object
+wave_number                           int64
+survey_date                  datetime64[ns]
+response_flag                          bool
+manager_effectiveness               float64
+psychological_safety                float64
+recognition                         float64
+career_development                  float64
+senior_leadership_trust             float64
+purpose_meaning                     float64
+wellbeing                           float64
+confidence_in_role_future           float64
+dtype: object
+
+Nulls:
+ employee_id                      0
+wave_number                      0
+survey_date                      0
+response_flag                    0
+manager_effectiveness        10264
+psychological_safety         10264
+recognition                  10264
+career_development           10264
+senior_leadership_trust      10264
+purpose_meaning              10264
+wellbeing                    10264
+confidence_in_role_future    10264
+dtype: int64
+
+wave_number counts:
+ wave_number
+1    10043
+2    10719
+3    11627
+4    11446
+5    12136
+Name: count, dtype: int64
+
+response_flag counts:
+ response_flag
+True     45707
+False    10264
+Name: count, dtype: int64
+
+response rate by wave:
+ wave_number
+1    0.836005
+2    0.825637
+3    0.810097
+4    0.812598
+5    0.802653
+Name: response_flag, dtype: float64
+
+survey_date range per wave:
+                    min        max
+wave_number                      
+1           2024-02-23 2024-03-08
+2           2024-06-24 2024-07-08
+3           2024-09-01 2024-10-31
+4           2025-01-25 2025-02-08
+5           2025-07-25 2025-08-08
+
+rows per employee (waves issued) describe:
+ count    13096.000000
+mean         4.273900
+std          1.305568
+min          1.000000
+25%          4.000000
+50%          5.000000
+75%          5.000000
+max          5.000000
+dtype: float64
+
+employees with 0 rows in engagement: 307
+================================================================================
+PERFORMANCE.csv shape: (34979, 7)
+employee_id                         object
+review_date                 datetime64[ns]
+performance_rating                  object
+review_cycle                        object
+promotion_recommendation              bool
+goal_achievement_score             float64
+reviewer_id                         object
+dtype: object
+
+Nulls:
+ employee_id                 0
+review_date                 0
+performance_rating          0
+review_cycle                0
+promotion_recommendation    0
+goal_achievement_score      0
+reviewer_id                 0
+dtype: int64
+
+performance_rating counts:
+ performance_rating
+Meets Expectations    16072
+High Performer        10069
+Outstanding            4207
+Below Expectations     3622
+Unsatisfactory         1009
+Name: count, dtype: int64
+
+review_cycle counts:
+ review_cycle
+2025-H1    12327
+2024-H2    11591
+2024-H1    11061
+Name: count, dtype: int64
+
+promotion_recommendation counts:
+ promotion_recommendation
+False    30064
+True      4915
+Name: count, dtype: int64
+
+goal_achievement_score describe:
+ count    34979.000000
+mean        66.870334
+std         15.530596
+min          0.000000
+25%         57.900000
+50%         67.800000
+75%         78.000000
+max        100.000000
+Name: goal_achievement_score, dtype: float64
+
+rows per employee describe:
+ count    13294.000000
+mean         2.631187
+std          0.704453
+min          1.000000
+25%          3.000000
+50%          3.000000
+75%          3.000000
+max          3.000000
+dtype: float64

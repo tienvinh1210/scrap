@@ -1,0 +1,175 @@
+==========================================================================================
+A. COMPENSATION HARMONISATION GAP: is Entity_B underpaid relative to NovaCorp-Origin at same level?
+==========================================================================================
+legacy_entity_code  Entity_A  Entity_B  Entity_C  NovaCorp-Origin
+role_level                                                       
+1                      0.958     0.961     0.962            0.962
+2                      0.957     0.960     0.959            0.903
+3                      0.962     0.962     0.966            0.940
+4                      0.972     0.948     0.949            0.966
+5                      0.980     0.988     1.010            0.962
+6                      0.992     0.840       NaN            0.972
+7                      0.920     0.917     0.950            0.915
+8                        NaN       NaN       NaN            1.000
+
+Overall mean compa_ratio by entity:
+legacy_entity_code
+Entity_A           0.959
+Entity_B           0.961
+Entity_C           0.962
+NovaCorp-Origin    0.937
+Name: compa_ratio, dtype: float64
+
+Share of employees with compa_ratio < 0.85 by entity:
+legacy_entity_code
+Entity_A            5.1
+Entity_B            4.3
+Entity_C            4.3
+NovaCorp-Origin    11.6
+Name: compa_ratio, dtype: float64
+
+High-value population only - underpaid share by entity:
+legacy_entity_code
+Entity_A           20.0
+Entity_B           12.7
+Entity_C           14.8
+NovaCorp-Origin    13.3
+Name: compa_ratio, dtype: float64
+
+==========================================================================================
+B. TRIPLE INTERSECTION: Entity_B x Risk & Compliance x underpaid -> regrettable attrition
+==========================================================================================
+Risk & Compliance headcount by entity:
+legacy_entity_code
+NovaCorp-Origin    1264
+Entity_A            316
+Entity_B            296
+Entity_C            146
+Name: count, dtype: int64
+
+Risk & Compliance attrition rate by entity (all levels):
+                    headcount  departed  regrettable  attr_%  regret_%
+legacy_entity_code                                                    
+Entity_A                  316        27            3     8.5       0.9
+Entity_B                  296        49            5    16.6       1.7
+Entity_C                  146        16            2    11.0       1.4
+NovaCorp-Origin          1264       147           23    11.6       1.8
+
+Risk & Compliance HIGH-VALUE headcount & attrition by entity:
+                    headcount  departed  regrettable  avg_compa  attr_%
+legacy_entity_code                                                     
+Entity_A                   58         6            2       0.93    10.3
+Entity_B                   54        10            3       0.92    18.5
+Entity_C                   27         5            2       0.92    18.5
+NovaCorp-Origin           292        48           15       0.92    16.4
+
+Risk & Compliance high-value role_level>=4 (Director+) specifically (annual report flags L4 Director attrition):
+  headcount=70, departed=13, rate=18.6%
+                    count  sum      mean
+legacy_entity_code                      
+Entity_A               16    1  0.062500
+Entity_B                6    0  0.000000
+Entity_C                4    0  0.000000
+NovaCorp-Origin        44   12  0.272727
+
+==========================================================================================
+C. DISENGAGEMENT: career_development dimension for stalled vs promoted; disengaged-but-staying detail
+==========================================================================================
+avg_career_dev: stalled vs promoted-eligible:
+  stalled: 3.384   promoted: 3.350
+avg_confidence_future: stalled vs promoted-eligible:
+  stalled: 3.374   promoted: 3.340
+
+Persistently disengaged ACTIVE employees: avg tenure, avg goal_achievement_score vs engaged actives
+  Disengaged active (n=2699): avg tenure_months=174.0, avg_goal_score=66.6, avg salary=$130,765
+  Engaged active   (n=9304): avg tenure_months=149.7, avg_goal_score=66.9, avg salary=$127,654
+
+Goal achievement score gap (productivity proxy) disengaged vs engaged, t-test:
+  t=-1.40, p=0.1627, mean diff = 0.29 pts
+
+Non-response rate as early-warning signal - logistic-style simple check (voluntary exit rate by response_rate quartile):
+resp_quartile
+(-0.001, 0.667]    13.1
+(0.667, 0.8]        2.9
+(0.8, 1.0]          6.8
+Name: is_voluntary, dtype: float64
+
+==========================================================================================
+D. HIRING CHANNEL: full-population (not just in-window) comparison, and graduate channel
+==========================================================================================
+
+Full-population early exit (<=12mo tenure among ALL hires, not just in-window) by hire_source:
+             headcount  early_exit  early_exit_rate_%
+hire_source                                          
+acquisition       5344         375               7.02
+agency            3243          25               0.77
+direct            2787           6               0.22
+graduate           683           2               0.29
+referral          1346           6               0.45
+
+Graduate channel profile: role_level distribution, avg tenure, attrition rate
+role_level
+1    320
+2    264
+3     70
+4     23
+5      5
+6      1
+Name: count, dtype: int64
+avg tenure_months: 239.5, attrition rate: 13.8%
+
+Agency vs Direct vs Referral: avg salary at hire (proxy = salary), avg days_to_fill, early_exit_rate - all non-acquisition
+             headcount  avg_salary  avg_days_to_fill  early_exit_rate
+hire_source                                                          
+agency            3243    130740.7              52.5              0.0
+direct            2787    130507.9              51.4              0.0
+graduate           683    134682.4              51.3              0.0
+referral          1346    130621.5              52.1              0.0
+
+==========================================================================================
+E. EQUITY / ETHICS SANITY CHECKS (gender pay & attrition, to pre-empt Q&A)
+==========================================================================================
+
+Headcount and compa_ratio by gender:
+                   headcount  avg_salary  avg_compa
+gender                                             
+Female                  6385   127765.45       0.95
+Male                    6172   128285.13       0.95
+Non-binary               489   129800.20       0.94
+Prefer not to say        357   127107.28       0.95
+
+Representation by gender at role_level >= 5 (senior exec):
+gender
+Female               59.2
+Male                 36.9
+Non-binary            1.9
+Prefer not to say     1.9
+Name: proportion, dtype: float64
+
+Attrition rate by gender:
+gender
+Female               10.6
+Male                 10.2
+Non-binary           11.0
+Prefer not to say    10.4
+Name: is_departed, dtype: float64
+
+High-value attrition by gender:
+gender
+Female               10.5
+Male                 12.2
+Non-binary            9.9
+Prefer not to say    20.9
+Name: is_departed, dtype: float64
+
+compa_ratio by gender within same role_level (checking like-for-like pay gap):
+gender      Female   Male  Non-binary  Prefer not to say
+role_level                                              
+1            0.961  0.962       0.958              0.961
+2            0.913  0.912       0.921              0.916
+3            0.947  0.946       0.938              0.954
+4            0.961  0.968       0.952              0.927
+5            0.963  0.979       1.040              0.900
+6            0.999  0.930         NaN                NaN
+7            0.920  0.933         NaN                NaN
+8            1.000    NaN         NaN                NaN
