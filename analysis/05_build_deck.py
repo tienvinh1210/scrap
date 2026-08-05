@@ -106,36 +106,52 @@ def save(fig, facecolor=WHITE):
     plt.close(fig)
 
 # ===========================================================================
-# SLIDE 1 — HOOK
+# SLIDE 1 — INTRODUCTION / COVER
 # ===========================================================================
 fig = plt.figure(figsize=FIGSIZE, dpi=150)
 fig.patch.set_facecolor(DARK)
-fig.text(0.5, 0.72, "NovaCorp is spending $42M/year on people costs.", fontsize=26, color=WHITE, ha="center", fontweight="bold")
-fig.text(0.5, 0.63, "Two of the three biggest drivers have nothing to do with pay.", fontsize=20, color="#D9C4F7", ha="center")
-fig.add_artist(plt.Line2D([0.30, 0.70], [0.55, 0.55], color=PURPLE, linewidth=2, transform=fig.transFigure))
-fig.text(0.5, 0.44, "Where NovaCorp's People Cost Is Really Coming From —", fontsize=15, color=WHITE, ha="center")
-fig.text(0.5, 0.385, "and What To Do About It in the Next 90 Days", fontsize=15, color=WHITE, ha="center")
-fig.text(0.5, 0.20, "Accenture x SUBAA People Analytics Challenge  |  NovaCorp CHRO Briefing  |  August 2026", fontsize=11, color="#B3A3D9", ha="center")
+fig.text(0.5, 0.83, "Accenture x SUBAA People Analytics Challenge 2026", fontsize=15, color="#B3A3D9", ha="center")
+fig.text(0.5, 0.755, "NovaCorp CHRO Briefing", fontsize=15, color="#B3A3D9", ha="center")
+fig.add_artist(plt.Line2D([0.30, 0.70], [0.685, 0.685], color=PURPLE, linewidth=2, transform=fig.transFigure))
+fig.text(0.5, 0.60, "Team 363738", fontsize=34, color=WHITE, ha="center", fontweight="bold")
+team_members = [
+    "Tien Vinh Dang",
+    "Thanh Hieu Nguyen Do",
+    "Yen Ngoc Nguyen",
+    "An Nhan Nguyen Vu",
+    "Quang Khai Thieu",
+]
+for i, name in enumerate(team_members):
+    fig.text(0.5, 0.42 - i * 0.055, name, fontsize=14, color="#D9C4F7", ha="center")
+fig.text(0.5, 0.09, "August 2026", fontsize=11, color="#8A7AB0", ha="center")
 SLIDE_NUM[0] = 1
 save(fig, facecolor=DARK)
 
 # ===========================================================================
-# SLIDE 2 — THE BUSINESS PROBLEM
+# SLIDE 2 — THREE MAIN FINDINGS (EXECUTIVE SUMMARY)
 # ===========================================================================
-fig = new_slide("The Business Problem", "A $42M estimate, decomposed into three components")
+fig = new_slide("Executive Summary", "Three findings explain where NovaCorp's people cost is really coming from")
 bullet_block(fig, 0.06, 0.75, [
-    "NovaCorp's CHRO has engaged us to explain what is driving an estimated $42M annual\npeople cost, and to advise where to focus first.",
+    "NovaCorp's CHRO asked us to explain what is driving an estimated $42M annual people\ncost, and to advise where to focus first.",
     "",
-    "Finance decomposed the estimate into three components. Our task is not to validate\nthe $42M — it is to identify what's driving it and what's tractable to fix.",
+    "Triangulating four datasets, we identified three distinct, targetable drivers — each\nwith a different root cause and a different fix.",
 ], fontsize=13.5, line_gap=0.06)
 
-comps = [("Regrettable attrition", "$22-25M", "Replacement cost of high-value\nvoluntary departures"),
-         ("Disengagement productivity loss", "$12-15M", "Productivity reduction for\npersistently disengaged staff"),
-         ("Hiring inefficiency", "$4-6M", "Agency premium + poor-match\nearly attrition")]
+findings = [
+    ("Finding 1", "Entity_B's high attrition is a\nleadership-trust problem,\nnot a pay problem", "~$5.6M/yr at risk", RED),
+    ("Finding 2", "Risk & Compliance is losing its\nmost senior veterans to the\nexternal market", "~$2.6M/yr at risk", GOLD),
+    ("Finding 3", "22.5% of active staff are\ndisengaged — and they aren't\nthe ones leaving", "up to $59M/yr exposure", PURPLE),
+]
 xs = [0.06, 0.395, 0.73]
-for (name, rng, desc), x in zip(comps, xs):
-    stat_card(fig, x, 0.13, 0.235, 0.30, rng, name, fontsize_val=22, fontsize_label=11)
-    fig.text(x + 0.1175, 0.095, desc, fontsize=9, color=GREY, ha="center", va="top")
+for (kicker_txt, desc, impact, color), x in zip(findings, xs):
+    ax = fig.add_axes([x, 0.10, 0.235, 0.34])
+    ax.axis("off")
+    box = FancyBboxPatch((0, 0), 1, 1, boxstyle="round,pad=0,rounding_size=0.06",
+                          transform=ax.transAxes, facecolor=LIGHT_BG, edgecolor=color, linewidth=1.3)
+    ax.add_patch(box)
+    ax.text(0.5, 0.87, kicker_txt.upper(), fontsize=10.5, color=color, fontweight="bold", ha="center", va="center", transform=ax.transAxes)
+    ax.text(0.5, 0.53, desc, fontsize=12.5, color=DARK, fontweight="bold", ha="center", va="center", transform=ax.transAxes, linespacing=1.5)
+    ax.text(0.5, 0.13, impact, fontsize=10.5, color=color, fontweight="bold", ha="center", va="center", transform=ax.transAxes)
 save(fig)
 
 # ===========================================================================
