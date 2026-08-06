@@ -432,7 +432,7 @@ cards = [
     ("NOW (0-30 days)", "$0 incremental cost", "Deploy a disengagement early-warning trigger",
      "Flag anyone completing <60% of surveys for a manager check-in within 2 weeks.\nThis signal predicts voluntary exit 3x better than the score itself (21.2% vs 6.8%).\nPilot in Corp Ops, Risk & Compliance, Insurance first.", GREEN),
     ("THIS QUARTER", "Protects ~$5.6M/yr", "Entity_B Leadership Reconnection Programme",
-     "ELT roadshow + listening tour for Entity_B (prioritise 354 high-value staff).\nTargets leadership trust (3.05→3.38) and purpose (3.06→3.38), not pay.\nTimed to the Q2 FY26 integration completion already committed to.", PURPLE),
+     "ELT roadshow + listening tour for Entity_B (prioritise 354 high-value staff).\nTargets leadership trust (3.05→3.38) and purpose (3.07→3.38)*, not pay.\nTimed to the Q2 FY26 integration completion already committed to.", PURPLE),
     ("THIS QUARTER (parallel)", "Protects ~$2.6M/yr", "Critical Regulatory Talent Retention track",
      "External market compensation benchmarking for R&C Director+ (44 people).\nAccelerated recognition + succession/knowledge-transfer safety net.\nAddresses external FAR-driven poaching, not an internal engagement gap.", RED),
 ]
@@ -446,14 +446,15 @@ for (badge, impact, title, body, color), y in zip(cards, y_starts):
     ax.text(0.98, 0.78, impact, fontsize=10, fontweight="bold", color=color, ha="right", transform=ax.transAxes)
     ax.text(0.02, 0.52, title, fontsize=13.5, fontweight="bold", color=DARK, transform=ax.transAxes)
     ax.text(0.02, 0.10, body, fontsize=9.3, color=SLATE, transform=ax.transAxes, va="bottom", linespacing=1.6)
+fig.text(0.055, 0.065, "* See Appendix A for methodology notes on starred figures.", fontsize=8.5, color=GREY, style="italic")
 save(fig)
 
 # ===========================================================================
 # SLIDE 13 — EXPECTED IMPACT
 # ===========================================================================
 fig = new_slide("Expected Impact", "What happens if NovaCorp acts")
-stat_card(fig, 0.045, 0.42, 0.30, 0.32, "~$10.5M/yr", "Protected replacement cost:\nEntity_B + R&C Director+ cohorts\nnormalised to company-average attrition", value_color=GREEN, fontsize_val=24)
-stat_card(fig, 0.35, 0.42, 0.30, 0.32, "~$25M/yr", "Disengagement exposure addressed\nby targeting the bottom-decile\ncohort (1,156 people) first", value_color=GOLD, fontsize_val=24)
+stat_card(fig, 0.045, 0.42, 0.30, 0.32, "~$8.2M/yr", "Protected replacement cost:\nEntity_B + R&C Director+ cohorts,\nif both are fully addressed", value_color=GREEN, fontsize_val=24)
+stat_card(fig, 0.35, 0.42, 0.30, 0.32, "~$23M/yr*", "Disengagement exposure addressed\nby targeting the bottom-decile\ncohort (1,048 people) first", value_color=GOLD, fontsize_val=24)
 stat_card(fig, 0.655, 0.42, 0.30, 0.32, "~$2.3M/yr", "Hiring-fee savings from shifting\ndiscretionary agency hires to\ndirect/referral pipelines", value_color=PURPLE, fontsize_val=24)
 bullet_block(fig, 0.06, 0.30, [
     "Measurement: Entity_B leadership_trust & purpose_meaning scores, and Entity_B\nvoluntary attrition rate, tracked at the next 2 survey waves.",
@@ -461,6 +462,7 @@ bullet_block(fig, 0.06, 0.30, [
     "Bottom-decile disengagement headcount, tracked wave-over-wave.",
     "Agency vs direct/referral hire mix, tracked quarterly.",
 ], fontsize=12.5, line_gap=0.052)
+fig.text(0.06, 0.055, "* See Appendix A for methodology notes on starred figures.", fontsize=9, color=GREY, style="italic")
 save(fig)
 
 # ===========================================================================
@@ -501,9 +503,31 @@ SLIDE_NUM[0] += 1
 save(fig, facecolor=DARK)
 
 # ===========================================================================
-# APPENDIX A — DATA & POPULATION DECISIONS
+# APPENDIX A — METHODOLOGY NOTES ON STARRED (*) FIGURES
 # ===========================================================================
-fig = new_slide("Appendix A", "Data sources & population decisions")
+fig = new_slide("Appendix A", "Methodology notes on starred (*) figures")
+bullet_block(fig, 0.06, 0.80, [
+    "These notes accompany figures marked * on Slides 12 and 13. Both figures are\ngenuine, reproducible calculations — the note is about the population basis used,\nnot about accuracy. Full audit trail: Proofs.md and output/tables/06_slide11_13_audit.txt.",
+], fontsize=11.5, line_gap=0.052)
+
+fig.text(0.06, 0.68, "Slide 12 — Entity_B leadership trust (3.05\u21923.38) and purpose (3.07\u21923.38)*", fontsize=13, color=PURPLE, fontweight="bold")
+bullet_block(fig, 0.06, 0.635, [
+    "\"3.38\" is the mean across all non-Entity_B active staff combined (Entity_A + Entity_C\n+ NovaCorp-Origin), computed as: leadership_trust = 3.375, purpose = 3.368.",
+    "This is a slightly broader base than the NovaCorp-Origin-only comparison figure used\nelsewhere in the analysis (3.383 / 3.383) — both round to 3.38, so the displayed number\nis unaffected, but the two are not drawn from an identical population.",
+    "This 'rest of company' average was originally computed only inside the chart-plotting\ncode for Slide 4 and had not been written to a saved output file before this audit.",
+], fontsize=11, line_gap=0.048)
+
+fig.text(0.06, 0.36, "Slide 13 — Bottom-decile disengagement cohort (1,048 people, ~$23M/yr)*", fontsize=13, color=GOLD, fontweight="bold")
+bullet_block(fig, 0.06, 0.315, [
+    "Computed on active staff with \u22652 completed survey responses (n=10,488 eligible) —\nthe same population basis used for every other 'sustained disengagement' figure in this\ndeck (the $59.3M headline, the Slide 9 sensitivity chart, the department breakdown).",
+    "An earlier working version of this figure used a looser \u22651-response basis (n=11,562),\nwhich gives 1,156 people / ~$25.3M/yr. That version was reproducible but inconsistent\nwith the rest of the deck's population definition, so it was corrected to the figure above.",
+], fontsize=11, line_gap=0.048)
+save(fig)
+
+# ===========================================================================
+# APPENDIX B — DATA & POPULATION DECISIONS
+# ===========================================================================
+fig = new_slide("Appendix B", "Data sources & population decisions")
 bullet_block(fig, 0.06, 0.78, [
     "employees.csv (13,403 rows, active+departed), attrition_log.csv (1,400), engagement.csv\n(55,971 rows, 5 waves), performance.csv (34,979 rows). Joined on employee_id.\nObservation window: 1 Jan 2024 - 31 Dec 2025.",
     "",
@@ -516,9 +540,9 @@ bullet_block(fig, 0.06, 0.78, [
 save(fig)
 
 # ===========================================================================
-# APPENDIX B — EQUITY / ETHICS CHECKS
+# APPENDIX C — EQUITY / ETHICS CHECKS
 # ===========================================================================
-fig = new_slide("Appendix B", "Equity & ethics checks performed — no red flags found")
+fig = new_slide("Appendix C", "Equity & ethics checks performed — no red flags found")
 gender_tab = m.groupby("gender").agg(headcount=("employee_id","count"), avg_compa=("compa_ratio","mean"), attr=("is_departed","mean"))
 ax = fig.add_axes([0.06, 0.20, 0.5, 0.55]); ax.axis("off")
 ax.set_title("By gender", fontsize=12, color=DARK, loc="left")
@@ -540,9 +564,9 @@ bullet_block(fig, 0.62, 0.70, [
 save(fig)
 
 # ===========================================================================
-# APPENDIX C — MANAGER CLUSTERING RULED OUT
+# APPENDIX D — MANAGER CLUSTERING RULED OUT
 # ===========================================================================
-fig = new_slide("Appendix C", "We tested a 'bad manager' narrative — the data does not support it")
+fig = new_slide("Appendix D", "We tested a 'bad manager' narrative — the data does not support it")
 mgr_stats = m.groupby("manager_id").agg(team_size=("employee_id","count"), departed=("is_departed","sum"), avg_team_engagement=("avg_engagement","mean")).reset_index()
 mgr_stats = mgr_stats[mgr_stats.team_size >= 5]
 mgr_stats["attrition_rate"] = mgr_stats.departed/mgr_stats.team_size
@@ -556,9 +580,9 @@ fig.text(0.06, 0.08, "45.1% of managers with 5+ reports had zero attrition in th
 save(fig)
 
 # ===========================================================================
-# APPENDIX D — DETAILED SEGMENT TABLES
+# APPENDIX E — DETAILED SEGMENT TABLES
 # ===========================================================================
-fig = new_slide("Appendix D", "Attrition rate by department and acquisition cohort")
+fig = new_slide("Appendix E", "Attrition rate by department and acquisition cohort")
 ct_hc = pd.crosstab(m.department, m.legacy_entity_code)
 ct_dep = pd.crosstab(m.department, m.legacy_entity_code, values=m.is_departed, aggfunc="sum")
 rate_tab = (ct_dep/ct_hc*100).round(1)
