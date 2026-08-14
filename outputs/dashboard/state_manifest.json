@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-08-14T13:00:09.544183+00:00",
+  "chart_count": 24,
+  "checkbox_state_count": 874,
+  "pages": [
+    "Headline Correction",
+    "Attrition by Entity",
+    "Attrition by Department",
+    "Engagement Wave Scores",
+    "Survey Response Rate",
+    "Disengagement Flags",
+    "Cost Pool Scenarios",
+    "Hiring Efficiency",
+    "Prediction (aggregate only)",
+    "Senior R&C Hotspot",
+    "Entity C Early Warning"
+  ]
+}
