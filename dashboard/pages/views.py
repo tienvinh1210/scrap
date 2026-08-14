@@ -65,6 +65,18 @@ def render_page(catalog: dict, page_def: dict) -> None:
 
     # Engagement page: pick dimension (which chart), then entity checkboxes
     if page_def.get("dimension_picker"):
+        st.sidebar.markdown(
+            """
+            <style>
+            [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"],
+            [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] * {
+                color: #000000 !important;
+                -webkit-text-fill-color: #000000 !important;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True,
+        )
         dim = st.sidebar.selectbox(
             "Engagement dimension",
             [c.replace("engagement_", "") for c in page_def["charts"]],

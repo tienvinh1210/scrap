@@ -26,30 +26,50 @@ st.markdown(
     """
     <style>
     .stApp { background-color: #f5f4ef; }
-    [data-testid="stSidebar"] { background-color: #0d2630; }
-    [data-testid="stSidebar"] * { color: #d8e4e7 !important; }
-    [data-testid="stSidebar"] label, [data-testid="stSidebar"] p, [data-testid="stSidebar"] small {
+    [data-testid="stSidebar"] {
+        background-color: #0d2630;
+        color: #d8e4e7;
+    }
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3,
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] small,
+    [data-testid="stSidebar"] [data-testid="stMarkdownContainer"],
+    [data-testid="stSidebar"] [data-testid="stRadio"] label,
+    [data-testid="stSidebar"] [data-testid="stRadio"] div,
+    [data-testid="stSidebar"] [data-testid="stRadio"] span,
+    [data-testid="stSidebar"] [data-testid="stCheckbox"] label,
+    [data-testid="stSidebar"] [data-testid="stCheckbox"] span,
+    [data-testid="stSidebar"] [data-testid="stWidgetLabel"] {
         color: #d8e4e7 !important;
     }
-    /* Selectbox control: black text on white background */
+    /* Engagement dimension selectbox: black default text on white control */
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-testid="stWidgetLabel"],
     [data-testid="stSidebar"] [data-testid="stSelectbox"] label {
         color: #89e0d5 !important;
     }
-    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"],
-    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div,
-    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] span,
-    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] div {
-        color: #102b36 !important;
-        -webkit-text-fill-color: #102b36 !important;
-    }
     [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] *,
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] input,
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div,
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div > div,
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] span,
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] div[value] {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+        caret-color: #000000 !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] input {
         background-color: #ffffff !important;
     }
     div[data-baseweb="popover"] li,
-    div[data-baseweb="popover"] li span,
-    div[data-baseweb="popover"] li div {
-        color: #102b36 !important;
-        -webkit-text-fill-color: #102b36 !important;
+    div[data-baseweb="popover"] li * {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
     }
     h1, h2, h3, h4 { color: #102b36; letter-spacing: -0.02em; }
     </style>
