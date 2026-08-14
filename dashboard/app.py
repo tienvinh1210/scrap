@@ -47,6 +47,11 @@ st.markdown(
     [data-testid="stSidebar"] {
         background-color: #0d2630;
         color: #d8e4e7;
+        overflow-y: auto;
+    }
+    [data-testid="stSidebar"] [data-testid="stRadio"] {
+        max-height: 62vh;
+        overflow-y: auto;
     }
     [data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,
@@ -96,7 +101,8 @@ st.markdown(
 
 
 @st.cache_data(show_spinner="Loading chart catalog…")
-def _load_catalog(path: str) -> dict:
+def _load_catalog(path: str, cache_version: str) -> dict:
+    del cache_version
     return load_dashboard_cache(path)
 
 
@@ -183,8 +189,10 @@ def render_page(catalog: dict, page_def: dict) -> None:
 
 
 def main() -> None:
+    cache_path = DEFAULT_CACHE
+    cache_version = str(cache_path.stat().st_mtime) if cache_path.exists() else "missing"
     try:
-        catalog = _load_catalog(str(DEFAULT_CACHE))
+        catalog = _load_catalog(str(cache_path), cache_version)
     except FileNotFoundError as exc:
         st.error(str(exc))
         st.code("python3 -m src.dashboard.build_cache")

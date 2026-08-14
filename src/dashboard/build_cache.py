@@ -235,22 +235,26 @@ def add_solution_profit_charts(charts: dict, pages: list) -> None:
     }
 
     pages[:] = [p for p in pages if p.get("id") != "solution_profit"]
-    pages.append(
-        {
-            "id": "solution_profit",
-            "title": "Solution Value & Profit",
-            "charts": [
-                "solution_recommendation_value",
-                "solution_total_addressable",
-                "solution_42m_comparison",
-                "solution_hiring_profit_split",
-                "solution_disengagement_dept",
-            ],
-            "series_checkbox_label": "Compare series",
-            "has_series_checkboxes": True,
-            "series_chart": "solution_42m_comparison",
-        }
-    )
+    solution_page = {
+        "id": "solution_profit",
+        "title": "Solution Value & Profit",
+        "charts": [
+            "solution_recommendation_value",
+            "solution_total_addressable",
+            "solution_42m_comparison",
+            "solution_hiring_profit_split",
+            "solution_disengagement_dept",
+        ],
+        "series_checkbox_label": "Compare series",
+        "has_series_checkboxes": True,
+        "series_chart": "solution_42m_comparison",
+    }
+    insert_at = 1
+    for i, page in enumerate(pages):
+        if page.get("id") == "headline":
+            insert_at = i + 1
+            break
+    pages.insert(insert_at, solution_page)
 
 
 def build_chart_catalog() -> dict:

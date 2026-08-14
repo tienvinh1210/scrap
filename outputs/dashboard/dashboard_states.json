@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.0",
-    "generated_at": "2026-08-14T13:42:54.815659+00:00",
+    "generated_at": "2026-08-14T13:54:30.868477+00:00",
     "observation_window": [
       "2024-01-01",
       "2025-12-31"
@@ -1797,6 +1797,20 @@
       "has_series_checkboxes": true
     },
     {
+      "id": "solution_profit",
+      "title": "Solution Value & Profit",
+      "charts": [
+        "solution_recommendation_value",
+        "solution_total_addressable",
+        "solution_42m_comparison",
+        "solution_hiring_profit_split",
+        "solution_disengagement_dept"
+      ],
+      "series_checkbox_label": "Compare series",
+      "has_series_checkboxes": true,
+      "series_chart": "solution_42m_comparison"
+    },
+    {
       "id": "entity_attrition",
       "title": "Attrition by Entity",
       "charts": [
@@ -1890,20 +1904,6 @@
       "series_checkbox_label": "Compare entities",
       "has_series_checkboxes": true,
       "series_chart": "entity_c_early_warning"
-    },
-    {
-      "id": "solution_profit",
-      "title": "Solution Value & Profit",
-      "charts": [
-        "solution_recommendation_value",
-        "solution_total_addressable",
-        "solution_42m_comparison",
-        "solution_hiring_profit_split",
-        "solution_disengagement_dept"
-      ],
-      "series_checkbox_label": "Compare series",
-      "has_series_checkboxes": true,
-      "series_chart": "solution_42m_comparison"
     }
   ],
   "checkbox_states": {
@@ -2027,6 +2027,1536 @@
         "Entity_A",
         "Entity_B",
         "Entity_C"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=entity_b_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "entity_b_program"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=rc_director_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "rc_director_program"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=disengagement_trigger": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "disengagement_trigger"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=agency_redirect": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "agency_redirect"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=entity_b_program,rc_director_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "entity_b_program",
+        "rc_director_program"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=disengagement_trigger,entity_b_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "entity_b_program",
+        "disengagement_trigger"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=agency_redirect,entity_b_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "entity_b_program",
+        "agency_redirect"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=disengagement_trigger,rc_director_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "rc_director_program",
+        "disengagement_trigger"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=agency_redirect,rc_director_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "rc_director_program",
+        "agency_redirect"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=agency_redirect,disengagement_trigger": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "disengagement_trigger",
+        "agency_redirect"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=disengagement_trigger,entity_b_program,rc_director_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "entity_b_program",
+        "rc_director_program",
+        "disengagement_trigger"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=agency_redirect,entity_b_program,rc_director_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "entity_b_program",
+        "rc_director_program",
+        "agency_redirect"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=agency_redirect,disengagement_trigger,entity_b_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "entity_b_program",
+        "disengagement_trigger",
+        "agency_redirect"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=agency_redirect,disengagement_trigger,rc_director_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "rc_director_program",
+        "disengagement_trigger",
+        "agency_redirect"
+      ]
+    },
+    "solution_profit|solution_recommendation_value|units=agency_redirect,disengagement_trigger,entity_b_program,rc_director_program": {
+      "page": "solution_profit",
+      "chart_id": "solution_recommendation_value",
+      "visible_units": [
+        "entity_b_program",
+        "rc_director_program",
+        "disengagement_trigger",
+        "agency_redirect"
+      ]
+    },
+    "solution_profit|solution_total_addressable|units=protected_replacement": {
+      "page": "solution_profit",
+      "chart_id": "solution_total_addressable",
+      "visible_units": [
+        "protected_replacement"
+      ]
+    },
+    "solution_profit|solution_total_addressable|units=disengagement_cohort": {
+      "page": "solution_profit",
+      "chart_id": "solution_total_addressable",
+      "visible_units": [
+        "disengagement_cohort"
+      ]
+    },
+    "solution_profit|solution_total_addressable|units=hiring_savings": {
+      "page": "solution_profit",
+      "chart_id": "solution_total_addressable",
+      "visible_units": [
+        "hiring_savings"
+      ]
+    },
+    "solution_profit|solution_total_addressable|units=disengagement_cohort,protected_replacement": {
+      "page": "solution_profit",
+      "chart_id": "solution_total_addressable",
+      "visible_units": [
+        "protected_replacement",
+        "disengagement_cohort"
+      ]
+    },
+    "solution_profit|solution_total_addressable|units=hiring_savings,protected_replacement": {
+      "page": "solution_profit",
+      "chart_id": "solution_total_addressable",
+      "visible_units": [
+        "protected_replacement",
+        "hiring_savings"
+      ]
+    },
+    "solution_profit|solution_total_addressable|units=disengagement_cohort,hiring_savings": {
+      "page": "solution_profit",
+      "chart_id": "solution_total_addressable",
+      "visible_units": [
+        "disengagement_cohort",
+        "hiring_savings"
+      ]
+    },
+    "solution_profit|solution_total_addressable|units=disengagement_cohort,hiring_savings,protected_replacement": {
+      "page": "solution_profit",
+      "chart_id": "solution_total_addressable",
+      "visible_units": [
+        "protected_replacement",
+        "disengagement_cohort",
+        "hiring_savings"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=regrettable_attrition": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "regrettable_attrition"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_severe": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "disengagement_severe"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_sustained": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "disengagement_sustained"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=hiring_inefficiency": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "hiring_inefficiency"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_severe,regrettable_attrition": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "regrettable_attrition",
+        "disengagement_severe"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_sustained,regrettable_attrition": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "regrettable_attrition",
+        "disengagement_sustained"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=hiring_inefficiency,regrettable_attrition": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "regrettable_attrition",
+        "hiring_inefficiency"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_severe,disengagement_sustained": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "disengagement_severe",
+        "disengagement_sustained"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_severe,hiring_inefficiency": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "disengagement_severe",
+        "hiring_inefficiency"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_sustained,hiring_inefficiency": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "disengagement_sustained",
+        "hiring_inefficiency"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_severe,disengagement_sustained,regrettable_attrition": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "regrettable_attrition",
+        "disengagement_severe",
+        "disengagement_sustained"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_severe,hiring_inefficiency,regrettable_attrition": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "regrettable_attrition",
+        "disengagement_severe",
+        "hiring_inefficiency"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_sustained,hiring_inefficiency,regrettable_attrition": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "regrettable_attrition",
+        "disengagement_sustained",
+        "hiring_inefficiency"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_severe,disengagement_sustained,hiring_inefficiency": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "disengagement_severe",
+        "disengagement_sustained",
+        "hiring_inefficiency"
+      ]
+    },
+    "solution_profit|solution_42m_comparison|units=disengagement_severe,disengagement_sustained,hiring_inefficiency,regrettable_attrition": {
+      "page": "solution_profit",
+      "chart_id": "solution_42m_comparison",
+      "visible_units": [
+        "regrettable_attrition",
+        "disengagement_severe",
+        "disengagement_sustained",
+        "hiring_inefficiency"
+      ]
+    },
+    "solution_profit|solution_hiring_profit_split|units=agency_excess_fees": {
+      "page": "solution_profit",
+      "chart_id": "solution_hiring_profit_split",
+      "visible_units": [
+        "agency_excess_fees"
+      ]
+    },
+    "solution_profit|solution_hiring_profit_split|units=poor_match_early_exit": {
+      "page": "solution_profit",
+      "chart_id": "solution_hiring_profit_split",
+      "visible_units": [
+        "poor_match_early_exit"
+      ]
+    },
+    "solution_profit|solution_hiring_profit_split|units=agency_excess_fees,poor_match_early_exit": {
+      "page": "solution_profit",
+      "chart_id": "solution_hiring_profit_split",
+      "visible_units": [
+        "agency_excess_fees",
+        "poor_match_early_exit"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Retail Banking": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Corporate Operations"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Retail Banking,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Corporate Operations"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Retail Banking,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Retail Banking,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Corporate Operations"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Corporate Operations"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Corporate Operations",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Corporate Operations",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Corporate Operations",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Corporate Operations"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Retail Banking,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Retail Banking,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Corporate Operations"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Corporate Operations",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Corporate Operations",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Corporate Operations",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Retail Banking,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Corporate Operations",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Corporate Operations",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Corporate Operations",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Corporate Operations",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Corporate Operations",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Retail Banking,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Corporate Operations",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Corporate Operations",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Corporate Operations",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Corporate Operations",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Corporate Operations",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Corporate Operations",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Technology"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Risk & Compliance": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Corporate Operations",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Technology": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
+      ]
+    },
+    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
+      "page": "solution_profit",
+      "chart_id": "solution_disengagement_dept",
+      "visible_units": [
+        "Retail Banking",
+        "Risk & Compliance",
+        "Insurance",
+        "Corporate Operations",
+        "Technology",
+        "Wealth Management",
+        "Executive Leadership"
       ]
     },
     "entity_attrition|entity_overview_rates|units=Entity_A": {
@@ -10013,1536 +11543,6 @@
         "Wave 5 career_development",
         "Voluntary exit within 180 days",
         "Involuntary exit within 180 days"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=entity_b_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "entity_b_program"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=rc_director_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "rc_director_program"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=disengagement_trigger": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "disengagement_trigger"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=agency_redirect": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "agency_redirect"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=entity_b_program,rc_director_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "entity_b_program",
-        "rc_director_program"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=disengagement_trigger,entity_b_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "entity_b_program",
-        "disengagement_trigger"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=agency_redirect,entity_b_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "entity_b_program",
-        "agency_redirect"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=disengagement_trigger,rc_director_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "rc_director_program",
-        "disengagement_trigger"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=agency_redirect,rc_director_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "rc_director_program",
-        "agency_redirect"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=agency_redirect,disengagement_trigger": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "disengagement_trigger",
-        "agency_redirect"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=disengagement_trigger,entity_b_program,rc_director_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "entity_b_program",
-        "rc_director_program",
-        "disengagement_trigger"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=agency_redirect,entity_b_program,rc_director_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "entity_b_program",
-        "rc_director_program",
-        "agency_redirect"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=agency_redirect,disengagement_trigger,entity_b_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "entity_b_program",
-        "disengagement_trigger",
-        "agency_redirect"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=agency_redirect,disengagement_trigger,rc_director_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "rc_director_program",
-        "disengagement_trigger",
-        "agency_redirect"
-      ]
-    },
-    "solution_profit|solution_recommendation_value|units=agency_redirect,disengagement_trigger,entity_b_program,rc_director_program": {
-      "page": "solution_profit",
-      "chart_id": "solution_recommendation_value",
-      "visible_units": [
-        "entity_b_program",
-        "rc_director_program",
-        "disengagement_trigger",
-        "agency_redirect"
-      ]
-    },
-    "solution_profit|solution_total_addressable|units=protected_replacement": {
-      "page": "solution_profit",
-      "chart_id": "solution_total_addressable",
-      "visible_units": [
-        "protected_replacement"
-      ]
-    },
-    "solution_profit|solution_total_addressable|units=disengagement_cohort": {
-      "page": "solution_profit",
-      "chart_id": "solution_total_addressable",
-      "visible_units": [
-        "disengagement_cohort"
-      ]
-    },
-    "solution_profit|solution_total_addressable|units=hiring_savings": {
-      "page": "solution_profit",
-      "chart_id": "solution_total_addressable",
-      "visible_units": [
-        "hiring_savings"
-      ]
-    },
-    "solution_profit|solution_total_addressable|units=disengagement_cohort,protected_replacement": {
-      "page": "solution_profit",
-      "chart_id": "solution_total_addressable",
-      "visible_units": [
-        "protected_replacement",
-        "disengagement_cohort"
-      ]
-    },
-    "solution_profit|solution_total_addressable|units=hiring_savings,protected_replacement": {
-      "page": "solution_profit",
-      "chart_id": "solution_total_addressable",
-      "visible_units": [
-        "protected_replacement",
-        "hiring_savings"
-      ]
-    },
-    "solution_profit|solution_total_addressable|units=disengagement_cohort,hiring_savings": {
-      "page": "solution_profit",
-      "chart_id": "solution_total_addressable",
-      "visible_units": [
-        "disengagement_cohort",
-        "hiring_savings"
-      ]
-    },
-    "solution_profit|solution_total_addressable|units=disengagement_cohort,hiring_savings,protected_replacement": {
-      "page": "solution_profit",
-      "chart_id": "solution_total_addressable",
-      "visible_units": [
-        "protected_replacement",
-        "disengagement_cohort",
-        "hiring_savings"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=regrettable_attrition": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "regrettable_attrition"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_severe": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "disengagement_severe"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_sustained": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "disengagement_sustained"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=hiring_inefficiency": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "hiring_inefficiency"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_severe,regrettable_attrition": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "regrettable_attrition",
-        "disengagement_severe"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_sustained,regrettable_attrition": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "regrettable_attrition",
-        "disengagement_sustained"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=hiring_inefficiency,regrettable_attrition": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "regrettable_attrition",
-        "hiring_inefficiency"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_severe,disengagement_sustained": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "disengagement_severe",
-        "disengagement_sustained"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_severe,hiring_inefficiency": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "disengagement_severe",
-        "hiring_inefficiency"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_sustained,hiring_inefficiency": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "disengagement_sustained",
-        "hiring_inefficiency"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_severe,disengagement_sustained,regrettable_attrition": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "regrettable_attrition",
-        "disengagement_severe",
-        "disengagement_sustained"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_severe,hiring_inefficiency,regrettable_attrition": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "regrettable_attrition",
-        "disengagement_severe",
-        "hiring_inefficiency"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_sustained,hiring_inefficiency,regrettable_attrition": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "regrettable_attrition",
-        "disengagement_sustained",
-        "hiring_inefficiency"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_severe,disengagement_sustained,hiring_inefficiency": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "disengagement_severe",
-        "disengagement_sustained",
-        "hiring_inefficiency"
-      ]
-    },
-    "solution_profit|solution_42m_comparison|units=disengagement_severe,disengagement_sustained,hiring_inefficiency,regrettable_attrition": {
-      "page": "solution_profit",
-      "chart_id": "solution_42m_comparison",
-      "visible_units": [
-        "regrettable_attrition",
-        "disengagement_severe",
-        "disengagement_sustained",
-        "hiring_inefficiency"
-      ]
-    },
-    "solution_profit|solution_hiring_profit_split|units=agency_excess_fees": {
-      "page": "solution_profit",
-      "chart_id": "solution_hiring_profit_split",
-      "visible_units": [
-        "agency_excess_fees"
-      ]
-    },
-    "solution_profit|solution_hiring_profit_split|units=poor_match_early_exit": {
-      "page": "solution_profit",
-      "chart_id": "solution_hiring_profit_split",
-      "visible_units": [
-        "poor_match_early_exit"
-      ]
-    },
-    "solution_profit|solution_hiring_profit_split|units=agency_excess_fees,poor_match_early_exit": {
-      "page": "solution_profit",
-      "chart_id": "solution_hiring_profit_split",
-      "visible_units": [
-        "agency_excess_fees",
-        "poor_match_early_exit"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Retail Banking": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Corporate Operations"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Retail Banking,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Corporate Operations"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Retail Banking,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Retail Banking,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Corporate Operations"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Corporate Operations"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Corporate Operations",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Corporate Operations",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Corporate Operations",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Corporate Operations"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Retail Banking,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Retail Banking,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Corporate Operations"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Corporate Operations",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Corporate Operations",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Corporate Operations",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Retail Banking,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Corporate Operations",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Corporate Operations",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Corporate Operations",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Corporate Operations",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Corporate Operations",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Retail Banking,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Corporate Operations",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Corporate Operations",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Corporate Operations",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Corporate Operations",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Corporate Operations",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Corporate Operations",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Technology"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Risk & Compliance": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Insurance,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Corporate Operations",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Insurance,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Technology": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
-      ]
-    },
-    "solution_profit|solution_disengagement_dept|units=Corporate Operations,Executive Leadership,Insurance,Retail Banking,Risk & Compliance,Technology,Wealth Management": {
-      "page": "solution_profit",
-      "chart_id": "solution_disengagement_dept",
-      "visible_units": [
-        "Retail Banking",
-        "Risk & Compliance",
-        "Insurance",
-        "Corporate Operations",
-        "Technology",
-        "Wealth Management",
-        "Executive Leadership"
       ]
     }
   }

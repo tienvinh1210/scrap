@@ -66,6 +66,12 @@ def render_multi_line(
     st.plotly_chart(fig, use_container_width=True)
 
 
+def _plot_value(val: float, fmt: str) -> float:
+    if fmt == "percent":
+        return val * 100
+    return val
+
+
 def render_grouped_bar(
     chart: dict,
     visible_units: list[str],
@@ -75,6 +81,7 @@ def render_grouped_bar(
     series_keys = visible_series or chart.get("series_keys", [])
     fig = go.Figure()
     colors = chart.get("series_colors", [TEAL, MINT, CORAL, AMBER])
+    y_format = chart.get("y_format", "number")
     for i, series_key in enumerate(series_keys):
         x_vals = []
         y_vals = []
@@ -89,8 +96,8 @@ def render_grouped_bar(
             if val is None:
                 continue
             x_vals.append(u.get("label", unit_id))
-            y_vals.append(val)
-            text.append(_format_value(val, chart.get("y_format", "number")))
+            y_vals.append(_plot_value(val, y_format))
+            text.append(_format_value(val, y_format))
         if x_vals:
             fig.add_bar(
                 name=chart["series_labels"].get(series_key, series_key),
@@ -113,6 +120,7 @@ def render_simple_bar(
 ) -> None:
     units = chart["units"]
     x_vals, y_vals, colors, text = [], [], [], []
+    y_format = chart.get("y_format", "number")
     for unit_id in visible_units:
         if unit_id not in units:
             continue
@@ -121,9 +129,9 @@ def render_simple_bar(
         if val is None:
             continue
         x_vals.append(u.get("label", unit_id))
-        y_vals.append(val)
+        y_vals.append(_plot_value(val, y_format))
         colors.append(u.get("color", TEAL))
-        text.append(_format_value(val, chart.get("y_format", "number")))
+        text.append(_format_value(val, y_format))
     if not x_vals:
         st.warning("Select at least one unit to display.")
         return
