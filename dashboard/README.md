@@ -7,7 +7,7 @@ Streamlit dashboard for the NovaCorp presentation. **Every section is a chart.**
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements-dashboard.txt
+pip install -r requirements.txt
 ```
 
 ## Build chart catalog
@@ -27,6 +27,14 @@ Writes `outputs/dashboard/dashboard_states.json` with:
 source .venv/bin/activate
 streamlit run dashboard/app.py
 ```
+
+## Deploy on Streamlit Community Cloud
+
+1. Commit and push **`requirements.txt`** (repo root), **`dashboard/`**, and **`outputs/dashboard/dashboard_states.json`**.
+2. Set **Main file path** to `dashboard/app.py`.
+3. Streamlit Cloud installs from root **`requirements.txt`** only — it must include `plotly`.
+
+If you see `ModuleNotFoundError: No module named 'plotly'`, add plotly to root `requirements.txt` and redeploy (Reboot app).
 
 ## Sections (all charts)
 

@@ -13,6 +13,16 @@ AMBER = "#e7a743"
 PILOT_COLORS = [TEAL, CORAL, AMBER]
 
 
+def _format_value(val: float | None, fmt: str) -> str | None:
+    if val is None:
+        return None
+    if fmt == "percent":
+        return f"{100 * val:.1f}%"
+    if fmt == "money":
+        return f"${val / 1e6:.2f}M" if val >= 1e6 else f"${val:,.0f}"
+    return f"{val:.2f}"
+
+
 def _layout(title: str, y_title: str, height: int = 420) -> dict:
     return dict(
         title=dict(text=title, font=dict(size=15, color=NAVY)),
@@ -76,14 +86,11 @@ def render_grouped_bar(
             if series_key not in u.get("series", {}):
                 continue
             val = u["series"][series_key]
+            if val is None:
+                continue
             x_vals.append(u.get("label", unit_id))
             y_vals.append(val)
-            if chart.get("y_format") == "percent":
-                text.append(f"{100 * val:.1f}%")
-            elif chart.get("y_format") == "money":
-                text.append(f"${val / 1e6:.2f}M" if val >= 1e6 else f"${val:,.0f}")
-            else:
-                text.append(f"{val:.2f}")
+            text.append(_format_value(val, chart.get("y_format", "number")))
         if x_vals:
             fig.add_bar(
                 name=chart["series_labels"].get(series_key, series_key),
@@ -111,16 +118,12 @@ def render_simple_bar(
             continue
         u = units[unit_id]
         val = u["value"]
+        if val is None:
+            continue
         x_vals.append(u.get("label", unit_id))
         y_vals.append(val)
         colors.append(u.get("color", TEAL))
-        fmt = chart.get("y_format", "number")
-        if fmt == "percent":
-            text.append(f"{100 * val:.1f}%")
-        elif fmt == "money":
-            text.append(f"${val / 1e6:.2f}M" if val >= 1e6 else f"${val:,.0f}")
-        else:
-            text.append(f"{val:.1f}")
+        text.append(_format_value(val, chart.get("y_format", "number")))
     if not x_vals:
         st.warning("Select at least one unit to display.")
         return
