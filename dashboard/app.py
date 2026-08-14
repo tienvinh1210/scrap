@@ -31,6 +31,26 @@ st.markdown(
     [data-testid="stSidebar"] label, [data-testid="stSidebar"] p, [data-testid="stSidebar"] small {
         color: #d8e4e7 !important;
     }
+    /* Selectbox control: black text on white background */
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] label {
+        color: #89e0d5 !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"],
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div,
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] span,
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] div {
+        color: #102b36 !important;
+        -webkit-text-fill-color: #102b36 !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] {
+        background-color: #ffffff !important;
+    }
+    div[data-baseweb="popover"] li,
+    div[data-baseweb="popover"] li span,
+    div[data-baseweb="popover"] li div {
+        color: #102b36 !important;
+        -webkit-text-fill-color: #102b36 !important;
+    }
     h1, h2, h3, h4 { color: #102b36; letter-spacing: -0.02em; }
     </style>
     """,
