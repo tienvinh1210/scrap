@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-14T13:00:09.544183+00:00",
-  "chart_count": 24,
-  "checkbox_state_count": 874,
+  "generated_at": "2026-08-14T13:42:54.815659+00:00",
+  "chart_count": 29,
+  "checkbox_state_count": 1041,
   "pages": [
     "Headline Correction",
     "Attrition by Entity",
@@ -13,6 +13,7 @@
     "Hiring Efficiency",
     "Prediction (aggregate only)",
     "Senior R&C Hotspot",
-    "Entity C Early Warning"
+    "Entity C Early Warning",
+    "Solution Value & Profit"
   ]
 }

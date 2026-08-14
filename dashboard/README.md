@@ -51,6 +51,7 @@ If you see `ModuleNotFoundError: No module named 'plotly'`, add plotly to root `
 | Prediction | Decile lift · calibration | Observed / predicted series |
 | Senior R&C Hotspot | L4+ voluntary by department | Departments |
 | Entity C Early Warning | C vs A/B indicators | Indicators · entities |
+| Solution Value & Profit | Recommendation value · $42M comparison · hiring split · dept exposure | Recommendations · cost buckets · departments |
 
 ## Example
 

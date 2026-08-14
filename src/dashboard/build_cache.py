@@ -93,6 +93,166 @@ def _event_time_units(df: pd.DataFrame, exit_type: str) -> dict:
     return units
 
 
+def add_solution_profit_charts(charts: dict, pages: list) -> None:
+    """Presentation solution value charts (from analysis/04_financial_model.py)."""
+
+    charts["solution_recommendation_value"] = {
+        "title": "Annual value protected or saved by each recommendation",
+        "type": "bar",
+        "y_label": "Annual value ($)",
+        "y_format": "money",
+        "units": {
+            "entity_b_program": {
+                "label": "Entity B leadership reconnection",
+                "value": 5_615_396,
+                "color": "#e66a50",
+            },
+            "rc_director_program": {
+                "label": "R&C Director+ retention track",
+                "value": 2_591_749,
+                "color": "#e7a743",
+            },
+            "disengagement_trigger": {
+                "label": "Disengagement early-warning (bottom decile)",
+                "value": 23_000_000,
+                "color": "#7b5ea7",
+            },
+            "agency_redirect": {
+                "label": "Agency-to-direct hiring redirect",
+                "value": 2_282_587,
+                "color": "#0d817b",
+            },
+        },
+        "default_units": [
+            "entity_b_program",
+            "rc_director_program",
+            "disengagement_trigger",
+            "agency_redirect",
+        ],
+        "footnote": "Values from deck financial model. Populations overlap — do not sum to a single profit figure.",
+    }
+
+    charts["solution_42m_comparison"] = {
+        "title": "$42M problem: Finance estimate vs data-derived (annual)",
+        "type": "grouped_bar",
+        "y_label": "Annual cost ($)",
+        "y_format": "money",
+        "series_keys": ["finance_estimate", "data_derived"],
+        "series_labels": {
+            "finance_estimate": "Finance midpoint",
+            "data_derived": "Data-derived",
+        },
+        "series_colors": ["#64747a", "#0d817b"],
+        "units": {
+            "regrettable_attrition": {
+                "label": "Regrettable attrition",
+                "series": {"finance_estimate": 23_500_000, "data_derived": 14_258_723},
+            },
+            "disengagement_severe": {
+                "label": "Disengagement (severe <2.5)",
+                "series": {"finance_estimate": 13_500_000, "data_derived": 15_400_000},
+            },
+            "disengagement_sustained": {
+                "label": "Disengagement (sustained <3.0)",
+                "series": {"finance_estimate": 13_500_000, "data_derived": 59_293_114},
+            },
+            "hiring_inefficiency": {
+                "label": "Hiring inefficiency",
+                "series": {"finance_estimate": 5_000_000, "data_derived": 4_552_607},
+            },
+        },
+        "default_units": [
+            "regrettable_attrition",
+            "disengagement_severe",
+            "hiring_inefficiency",
+        ],
+        "footnote": "Disengagement severe band (~6% of staff) aligns with Finance $12–15M; sustained population is larger.",
+    }
+
+    charts["solution_hiring_profit_split"] = {
+        "title": "Hiring inefficiency — where the $4.6M/yr comes from",
+        "type": "bar",
+        "y_label": "Annual cost ($)",
+        "y_format": "money",
+        "units": {
+            "agency_excess_fees": {
+                "label": "Excess agency fees vs direct benchmark",
+                "value": 2_282_587,
+                "color": "#0d817b",
+            },
+            "poor_match_early_exit": {
+                "label": "Poor-match agency early-exit backfill",
+                "value": 2_270_020,
+                "color": "#e66a50",
+            },
+        },
+        "default_units": ["agency_excess_fees", "poor_match_early_exit"],
+        "footnote": "Agency fee savings alone (~$2.3M/yr) can fund other programme costs per deck.",
+    }
+
+    charts["solution_disengagement_dept"] = {
+        "title": "Disengagement productivity exposure by department",
+        "type": "bar",
+        "y_label": "Annual exposure ($)",
+        "y_format": "money",
+        "units": {
+            "Retail Banking": {"label": "Retail Banking", "value": 16_154_645, "color": "#0d817b"},
+            "Risk & Compliance": {"label": "Risk & Compliance", "value": 12_184_586, "color": "#e66a50"},
+            "Insurance": {"label": "Insurance", "value": 11_207_935, "color": "#e7a743"},
+            "Corporate Operations": {"label": "Corporate Operations", "value": 10_758_468, "color": "#64747a"},
+            "Technology": {"label": "Technology", "value": 5_072_239, "color": "#89e0d5"},
+            "Wealth Management": {"label": "Wealth Management", "value": 3_105_497, "color": "#0d2630"},
+            "Executive Leadership": {"label": "Executive Leadership", "value": 809_743, "color": "#64747a"},
+        },
+        "default_units": DEPARTMENTS.copy(),
+        "footnote": "Finance 15% productivity assumption on persistently disengaged active staff — not empirically measured loss.",
+    }
+
+    charts["solution_total_addressable"] = {
+        "title": "Total addressable value if recommendations succeed",
+        "type": "grouped_bar",
+        "y_label": "Annual value ($)",
+        "y_format": "money",
+        "series_keys": ["addressable_value"],
+        "series_labels": {"addressable_value": "Annual value"},
+        "series_colors": ["#0d817b"],
+        "units": {
+            "protected_replacement": {
+                "label": "Protected replacement\n(Entity B + R&C)",
+                "series": {"addressable_value": 8_207_145},
+            },
+            "disengagement_cohort": {
+                "label": "Disengagement cohort\n(bottom decile)",
+                "series": {"addressable_value": 23_000_000},
+            },
+            "hiring_savings": {
+                "label": "Hiring fee savings",
+                "series": {"addressable_value": 2_282_587},
+            },
+        },
+        "default_units": ["protected_replacement", "disengagement_cohort", "hiring_savings"],
+        "footnote": "Deck headline: ~$8.2M protected replacement + ~$23M disengagement exposure + ~$2.3M hiring savings. Not additive.",
+    }
+
+    pages[:] = [p for p in pages if p.get("id") != "solution_profit"]
+    pages.append(
+        {
+            "id": "solution_profit",
+            "title": "Solution Value & Profit",
+            "charts": [
+                "solution_recommendation_value",
+                "solution_total_addressable",
+                "solution_42m_comparison",
+                "solution_hiring_profit_split",
+                "solution_disengagement_dept",
+            ],
+            "series_checkbox_label": "Compare series",
+            "has_series_checkboxes": True,
+            "series_chart": "solution_42m_comparison",
+        }
+    )
+
+
 def build_chart_catalog() -> dict:
     event_time = _read_csv("pass5_acquisition_event_time.csv")
     headline = _read_csv("headline_reconciliation.csv")
@@ -495,6 +655,8 @@ def build_chart_catalog() -> dict:
         },
     ]
 
+    add_solution_profit_charts(charts, pages)
+
     return {
         "meta": {
             "version": "2.0",
@@ -567,7 +729,19 @@ def main() -> None:
         print(f"Verified {data['meta']['chart_count']} charts, {data['meta'].get('checkbox_state_count', 0)} checkbox states")
         return
 
-    catalog = build_chart_catalog()
+    catalog_path = CACHE_DIR / "dashboard_states.json"
+    try:
+        catalog = build_chart_catalog()
+    except FileNotFoundError as exc:
+        print(f"Partial rebuild ({exc}); patching existing catalog.")
+        if not catalog_path.exists():
+            raise
+        with catalog_path.open(encoding="utf-8") as handle:
+            catalog = json.load(handle)
+        add_solution_profit_charts(catalog["charts"], catalog["pages"])
+        catalog["meta"]["chart_count"] = len(catalog["charts"])
+        catalog["meta"]["generated_at"] = datetime.now(timezone.utc).isoformat()
+
     path = write_catalog(catalog)
     print(f"Wrote {catalog['meta']['chart_count']} charts to {path}")
     print(f"Checkbox states: {catalog['meta']['checkbox_state_count']}")
