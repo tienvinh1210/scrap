@@ -1,2 +1,1 @@
-# NovaCorp
-Datathon
+Just to host the dashboard, pls ignore this repo
