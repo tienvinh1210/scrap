@@ -1,0 +1,17 @@
+# NovaCorp dashboards — runtime dependencies.
+#
+# Streamlit Community Cloud installs from this file only, so plotly must be
+# listed here explicitly (see dashboard/README.md).
+#
+# Pins are lower bounds matched to the versions this was built and demoed on
+# (Python 3.14.5). Both apps use Streamlit APIs that are not available before
+# 1.57: st.container(key=...), width="stretch", and segmented_control.
+
+streamlit>=1.57,<2
+plotly>=6.0,<7
+pandas>=2.2,<3
+numpy>=2.0,<3
+
+# Test suite only (tests/test_monitor.py, tests/test_nova_app.py).
+# Not needed to run either dashboard; install with:  pip install -r requirements.txt pytest
+# pytest>=8
