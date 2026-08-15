@@ -1,6 +1,44 @@
-# NovaCorp People Assurance Dashboard
+# NovaCorp dashboards
 
-Streamlit dashboard for the NovaCorp presentation. **Every section is a chart.** Use sidebar **checkboxes** to show or hide units (entities, departments, rate types, scenarios).
+Two Streamlit apps, each with its own data pipeline. They share nothing but the
+guardrail banner and can be run at the same time.
+
+| App | Command | What it is |
+|-----|---------|------------|
+| Pitch dashboard | `streamlit run dashboard/app.py` | The deck companion — 12 chart pages behind a two-tier nav. Reads `outputs/dashboard/dashboard_states.json`. |
+| Monitoring cockpit | `streamlit run dashboard/cockpit/nova_app.py` | One screen: wave timeline, live KPI tiles, department × entity heat matrix, attrition trend, cost buckets, flagged cohorts. Reads `outputs/monitor/monitor_mart.json`. |
+
+## Monitoring cockpit
+
+Built from the source CSVs rather than pre-baked chart data, so it can be rebuilt
+from a fresh clone:
+
+```bash
+python -m src.monitor.build_mart --verify   # writes outputs/monitor/monitor_mart.json
+streamlit run dashboard/cockpit/nova_app.py
+```
+
+`--verify` asserts the company-wide cost buckets still reconcile with
+`analysis/04_financial_model.py`'s published totals, so a definition can't drift
+without the build failing.
+
+**Scenarios.** The header toggle switches the whole screen between the observed
+data (waves 1–5) and the two simulated futures in `scenarios/` (waves 6–8, through
+Jul 2026). Those rows are a simulation for exercising the monitoring loop, not a
+forecast — the app says so in a banner whenever a scenario is active.
+
+**Guardrails.** Aggregate-only, no individual risk scores; cohorts under 30 people
+are withheld from the flagged table and the count of withheld cohorts is disclosed.
+
+**Theme.** `dashboard/cockpit/.streamlit/config.toml`. Streamlit resolves config from
+the directory of the main script, so this styles the cockpit only and leaves the pitch
+dashboard on its defaults — that is why the cockpit lives in its own folder.
+
+---
+
+## Pitch dashboard
+
+**Every section is a chart.** Use sidebar **checkboxes** to show or hide units (entities, departments, rate types, scenarios).
 
 ## Prerequisites
 

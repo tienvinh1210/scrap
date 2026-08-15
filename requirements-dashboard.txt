@@ -1,6 +1,0 @@
-# NovaCorp dashboard dependencies
-# Streamlit Cloud reads requirements.txt at the repo root — keep in sync with ../requirements.txt
-
-streamlit>=1.28.0
-plotly>=5.18.0
-pandas>=2.0.0

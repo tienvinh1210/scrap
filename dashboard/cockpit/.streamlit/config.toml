@@ -1,0 +1,42 @@
+# Theme for the monitoring cockpit only.
+#
+# Streamlit resolves script-level config from the directory of the main script, so
+# this file applies to `streamlit run dashboard/cockpit/nova_app.py` and leaves
+# `dashboard/app.py` on its own defaults.
+#
+# Values are taken from nova_dashboard_mockup_1786762464223.jpg: light grey page,
+# white cards with 8px corners and hairline borders, a bright blue accent, and the
+# salmon/teal pair used for the heat matrix and bars.
+
+[theme]
+base = "light"
+
+primaryColor = "#1a73e8"              # accent blue: stepper, bars, active states
+backgroundColor = "#f0f0f0"           # page grey behind the cards
+secondaryBackgroundColor = "#ffffff"  # card surfaces
+textColor = "#202124"
+borderColor = "#dadce0"
+linkColor = "#1a73e8"
+linkUnderline = false
+
+baseRadius = "8px"
+buttonRadius = "8px"
+showWidgetBorder = true
+
+font = "Roboto:https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+baseFontSize = 16
+baseFontWeight = 400
+headingFontSizes = ["24px", "20px", "17px", "15px", "14px", "13px"]
+headingFontWeights = [700, 700, 500, 500, 500, 500]
+
+greenColor = "#2ec4a6"
+redColor = "#f4756a"
+orangeColor = "#f0a202"
+blueColor = "#1a73e8"
+grayColor = "#5f6368"
+
+chartCategoricalColors = ["#1a73e8", "#2ec4a6", "#f4756a", "#f0a202", "#5f6368", "#7baaf7", "#16202c"]
+chartSequentialColors = ["#eaf1fd", "#d3e2fb", "#bcd3f9", "#a5c4f7", "#8eb5f5", "#77a6f2", "#5f97f0", "#4888ee", "#3179ec", "#1a6ae9"]
+
+dataframeBorderColor = "#dadce0"
+dataframeHeaderBackgroundColor = "#f7f8f8"

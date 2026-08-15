@@ -10,15 +10,21 @@ def unit_checkboxes(
     key_prefix: str,
     default: list[str] | None = None,
     label: str = "Show units",
+    container=None,
 ) -> list[str]:
-    """Render checkboxes for each unit; return list of selected unit ids."""
+    """Render checkboxes for each unit; return list of selected unit ids.
 
-    st.sidebar.markdown(f"**{label}**")
+    ``container`` defaults to the sidebar; pass an expander (or any container) to
+    render the controls inline instead.
+    """
+
+    target = container if container is not None else st.sidebar
+    target.markdown(f"**{label}**")
     selected: list[str] = []
     defaults = set(default or list(units.keys()))
     for unit_id, meta in units.items():
         unit_label = meta.get("label", unit_id) if isinstance(meta, dict) else unit_id
-        checked = st.sidebar.checkbox(
+        checked = target.checkbox(
             unit_label,
             value=unit_id in defaults,
             key=f"{key_prefix}_{unit_id}",
